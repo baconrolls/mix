@@ -44,12 +44,17 @@ function checkMix() {
       resultMessage.textContent = "These products should not be mixed. Using hydroquinone and resorcinol together can cause skin irritation and potential side effects.";
     } else if ((product1 === "retinol" && product2 === "resorcinol") || (product1 === "resorcinol" && product2 === "retinol")) {
       resultMessage.textContent = "These products should not be mixed. Combining retinol and resorcinol may increase the risk of skin irritation and sensitivity.";
-    }
-    
-    
-    
-    else {
+    } else {
       resultMessage.textContent = "These products should not be mixed together. Mixing them may cause adverse effects on your skin.";
+    }
+     // Disable the options that are not in the result message
+    for (let i = 0; i < product1Options.length; i++) {
+      if (product1Options[i].value !== product1 && product1Options[i].value !== product2) {
+        product1Options[i].disabled = true;
+      }
+      if (product2Options[i].value !== product1 && product2Options[i].value !== product2) {
+        product2Options[i].disabled = true;
+      }
     }
   }
 }
