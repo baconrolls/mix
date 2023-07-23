@@ -62,7 +62,30 @@ function checkMix() {
       resultMessage.textContent = "These products should not be mixed. The combination can cause flushing or redness, particularly for individuals with sensitive skin.";
     } else if ((product1 === "squalane" && product2 === "hydroquinone") || (product1 === "hydroquinone" && product2 === "squalane")) {
       resultMessage.textContent = "These products should not be mixed. Combining both can may lead to skin sensitivity and reduce the effectiveness of both products.";
+    } else if ((product1 === "squalane" && product2 === "moisturizer") || (product1 === "moisturizer" && product2 === "squalane")) {
+      resultMessage.textContent = "These products can be mixed. Add a few drops of squalane oil to your regular moisturizer to boost hydration and lock in moisture.";
+    } else if ((product1 === "serum" && product2 === "squalane") || (product1 === "squalane" && product2 === "serum")) {
+      resultMessage.textContent = "These products can be mixed. Mix squalane oil with serums containing hyaluronic acid to enhance their moisturizing and brightening effects.";
+    } else if ((product1 === "cleanser" && product2 === "retinol") || (product1 === "retinol" && product2 === "cleanser")) {
+      resultMessage.textContent = "These products should not be mixed. Mixing can cause excessive dryness and irritation to the skin.";
+    } else if ((product1 === "cleanser" && product2 === "vitamin c") || (product1 === "vitamin c" && product2 === "cleanser")) {
+      resultMessage.textContent = "These products should not be mixed. Can be less effective when mixed with cleanser, so it's better to apply it separately.";
+    } else if ((product1 === "cleanser" && product2 === "aha") || (product1 === "aha" && product2 === "cleanser")) {
+      resultMessage.textContent = "These products should not be mixed. Using cleanser with AHAs can lead to excessive exfoliation and irritation.";
+    } else if ((product1 === "cleanser" && product2 === "bha") || (product1 === "bha" && product2 === "cleanser")) {
+      resultMessage.textContent = "These products should not be mixed. Using cleanser with BHAs can lead to excessive exfoliation and irritation.";
+    } else if ((product1 === "cleanser" && product2 === "niacinamide") || (product1 === "niacinamide" && product2 === "cleanser")) {
+      resultMessage.textContent = "These products should not be mixed. Mixing niacinamide with cleanser may reduce its effectiveness and benefits for the skin.";
+    } else if ((product1 === "cleanser" && product2 === "salicylic acid") || (product1 === "salicylic acid" && product2 === "cleanser")) {
+      resultMessage.textContent = "These products should not be mixed. It's not recommended to mix these two products as they can lead to excessive dryness and irritation when used together.";
+    } else if ((product1 === "cleanser" && product2 === "glycolic acid") || (product1 === "glycolic acid" && product2 === "cleanser")) {
+      resultMessage.textContent = "These products should not be mixed. using glycolic acid with a cleanser can lead to over-exfoliation and potential skin irritation.";
+    } else if ((product1 === "cleanser" && product2 === "alpha arbutin") || (product1 === "alpha arbutin" && product2 === "cleanser")) {
+      resultMessage.textContent = "These products should not be mixed. Cleansers cleanse the skin, while alpha arbutin treats hyperpigmentation and dark spots.";
+    } else if ((product1 === "cleanser" && product2 === "ceramides") || (product1 === "ceramides" && product2 === "cleanser")) {
+      resultMessage.textContent = "These products should not be mixed. Cleansers cleanse and remove impurities, while ceramides lock in moisture and protect the skin's barrier.";
     }
+    
     
     
     
