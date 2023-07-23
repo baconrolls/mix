@@ -3,6 +3,14 @@ function checkMix() {
   const product2 = document.getElementById("product2").value;
   const resultMessage = document.getElementById("result");
 
+  // Enable all options in the drop-down menus
+  const product1Options = document.getElementById("product1").options;
+  const product2Options = document.getElementById("product2").options;
+  for (let i = 0; i < product1Options.length; i++) {
+    product1Options[i].disabled = false;
+    product2Options[i].disabled = false;
+  }
+
   if (product1 === product2) {
     resultMessage.textContent = "Oops! You selected the same product twice. Please select two different products to check if they can be mixed.";
   } else {
