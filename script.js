@@ -32,6 +32,18 @@ function checkMix() {
       resultMessage.textContent = "These products should not be mixed. Using both can lead to dryness and irritation.";
     } else if ((product1 === "hydroquine" && product2 === "vitamin c") || (product1 === "vitamin c" && product2 === "hydroquine")) {
       resultMessage.textContent = "These products should not be mixed. Using both can lead to skin sensitivity and reduce their effectiveness.";
+    } else if ((product1 === "aha" && product2 === "bha") || (product1 === "bha" && product2 === "aha")) {
+      resultMessage.textContent = "These products should not be mixed.  Both AHA and BHA are exfoliating acids and using them together can lead to excessive exfoliation and skin irritation.";
+    } else if ((product1 === "retinol" && product2 === "bha") || (product1 === "bha" && product2 === "retinol")) {
+      resultMessage.textContent = "These products should not be mixed. Using BHA and retinol together can lead to skin irritation and sensitivity.";
+    } else if ((product1 === "vitamin c" && product2 === "salicylic acid") || (product1 === "salicyc acid" && product2 === "vitamin c")) {
+      resultMessage.textContent = "These products should not be mixed. The combination of vitamin C and salicylic acid may cause skin irritation and dryness.";
+    } else if ((product1 === "resorcinol" && product2 === "vitamin c") || (product1 === "vitamin c" && product2 === "resorcinol")) {
+      resultMessage.textContent = "These products should not be mixed. The combination of vitamin C and resorcinol may lead to skin irritation and adverse reactions.";
+    } else if ((product1 === "hydroquine" && product2 === "resorcinol") || (product1 === "resorcinol" && product2 === "hydroquine")) {
+      resultMessage.textContent = "These products should not be mixed. Using hydroquinone and resorcinol together can cause skin irritation and potential side effects.";
+    } else if ((product1 === "retinol" && product2 === "resorcinol") || (product1 === "resorcinol" && product2 === "retinol")) {
+      resultMessage.textContent = "These products should not be mixed. Combining retinol and resorcinol may increase the risk of skin irritation and sensitivity.";
     }
     
     
