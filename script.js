@@ -18,7 +18,25 @@ function checkMix() {
       resultMessage.textContent = "These products can be mixed. They provide toning and added nutrients to your skin.";
     } else if ((product1 === "moisturizer" && product2 === "serum") || (product1 === "serum" && product2 === "moisturizer")) {
       resultMessage.textContent = "These products can be mixed. They provide moisturizing and added nutrients to your skin.";
-    } else {
+    }  else if ((product1 === "vitamin c" && product2 === "retinol") || (product1 === "retinol" && product2 === "vitamin c")) {
+      resultMessage.textContent = "These products should not be mixed. These two active ingredients can cause irritation and sensitivity when used together.";
+    }  else if ((product1 === "benzoyl peroxide" && product2 === "retinol") || (product1 === "retinol" && product2 === "benzoyl peroxide")) {
+      resultMessage.textContent = "These products should not be mixed. Mixing these can lead to excessive dryness and irritation.";
+    }  else if ((product1 === "vitamin c" && product2 === "niacinamide") || (product1 === "niacinamide" && product2 === "vitamin c")) {
+      resultMessage.textContent = "These products should not be mixed. These two ingredients can cancel each other out and reduce effectiveness when used together.";
+    } else if ((product1 === "niacinamide" && product2 === "retinol") || (product1 === "retinol" && product2 === "niacinamide")) {
+      resultMessage.textContent = "These products should not be mixed. Using both can cause flushing or redness in some individuals.";
+    } else if ((product1 === "retinol" && product2 === "aha") || (product1 === "aha" && product2 === "retinol")) {
+      resultMessage.textContent = "These products should not be mixed. This combination can lead to excessive irritation and redness.";
+    } else if ((product1 === "benzoyl peroxide" && product2 === "salicylic acid") || (product1 === "salicylic acid" && product2 === "benzoyl peroxide")) {
+      resultMessage.textContent = "These products should not be mixed. Using both can lead to dryness and irritation.";
+    } else if ((product1 === "hydroquine" && product2 === "vitamin c") || (product1 === "vitamin c" && product2 === "hydroquine")) {
+      resultMessage.textContent = "These products should not be mixed. Using both can lead to skin sensitivity and reduce their effectiveness.";
+    }
+    
+    
+    
+    else {
       resultMessage.textContent = "These products should not be mixed together. Mixing them may cause adverse effects on your skin.";
     }
   }
