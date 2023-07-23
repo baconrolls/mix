@@ -52,7 +52,22 @@ function checkMix() {
       resultMessage.textContent = "These products should not be mixed. Using hydroquinone and resorcinol together can cause skin irritation and potential side effects.";
     } else if ((product1 === "retinol" && product2 === "resorcinol") || (product1 === "resorcinol" && product2 === "retinol")) {
       resultMessage.textContent = "These products should not be mixed. Combining retinol and resorcinol may increase the risk of skin irritation and sensitivity.";
-    } else {
+    } else if ((product1 === "retinol" && product2 === "squalane") || (product1 === "squalane" && product2 === "retinol")) {
+      resultMessage.textContent = "These products should not be mixed. The combination may reduce the effectiveness of both ingredients, leading to less effective results for your skin.";
+    } else if ((product1 === "squalane" && product2 === "vitamin c") || (product1 === "vitamin c" && product2 === "squalane")) {
+      resultMessage.textContent = "These products should not be mixed. When combined may reduce its effectiveness, as they can neutralize each other's benefits.";
+    } else if ((product1 === "benzoyl peroxide" && product2 === "squalane") || (product1 === "squalane" && product2 === "benzoyl peroxide")) {
+      resultMessage.textContent = "These products should not be mixed. Using both can lead to excessive dryness and irritation, especially for acne-prone or sensitive skin.";
+    } else if ((product1 === "niacinamide" && product2 === "squalane") || (product1 === "squalane" && product2 === "niacinamide")) {
+      resultMessage.textContent = "These products should not be mixed. The combination can cause flushing or redness, particularly for individuals with sensitive skin.";
+    } else if ((product1 === "squalane" && product2 === "hydroquinone") || (product1 === "hydroquinone" && product2 === "squalane")) {
+      resultMessage.textContent = "These products should not be mixed. Combining both can may lead to skin sensitivity and reduce the effectiveness of both products.";
+    }
+    
+    
+    
+    
+    else {
       resultMessage.textContent = "These products should not be mixed together. Mixing them may cause adverse effects on your skin.";
     }
      // Disable the options that are not in the result message
